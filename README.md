@@ -4,7 +4,7 @@
 
 <h3 align="center">
 
-👩‍💻 ADA é um projeto desenvolvido durante o curso da **[Generation Brasil](https://brazil.generation.org/)**  utilizando as tecnologias ***Java, Spring Boot, REST API e MySQL***.
+👩‍💻 ADA é um projeto desenvolvido durante o curso da **[Generation Brasil](https://brazil.generation.org/)**  utilizando as tecnologias ***Java, Spring Boot, REST API, MySQL, Angular e TypeScript***.
 
 </h3>
 
@@ -20,10 +20,10 @@ O projeto tem como finalidade criar uma **rede de comunidade para mulheres no me
 
 ## **:computer: TECNOLOGIAS**
 
+#### **Frontend:** [Angular](https://angular.io/) + [TypeScript](https://www.typescriptlang.org/)
 
 #### **Backend:** [Spring Boot](https://spring.io/projects/spring-boot) + [Java 8](https://www.java.com/pt-BR/) + [MySQL](https://www.mysql.com/)
-#### **Frontend:** [Angular](https://angular.io/) Em construção 🚧
-
+#### **Link Repositório Backend:** [ADA-backend](https://github.com/jackakemi/ADA-backend)
 
 ## **:heavy_check_mark: COMO UTILIZAR**
 
