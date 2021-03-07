@@ -28,13 +28,10 @@ O projeto tem como finalidade criar uma **rede de comunidade para mulheres no me
 ## **:heavy_check_mark: COMO UTILIZAR**
 
 ### Configurações Iniciais
-
-Primeiro, você precisa ter o <kbd>[Java 8 + ](https://www.java.com/pt-BR/)</kbd> instalado na sua máquina. 
-
-
-Após ter o **Java** instalado, inicie o programa no seu editor de preferência e ele será inicializado no localhost:8080, assim poderá testar todos os endpoints contruídos:
-
-[Collection Postman](https://github.com/jackakemi/ADA-backend/blob/main/ADA-backend.postman_collection.json)
+ 
+Após ter iniciado o backend, conforme repositório citado acima, siga as instruções abaixo:
+- Faça a instalação do node e rode o comando **npm install**;
+- Rode o comando **ng serve** e o frontend será iniciado no http://localhost:4200/ automaticamente.
 
 
 ## **:star2: DESENVOLVEDORES**
