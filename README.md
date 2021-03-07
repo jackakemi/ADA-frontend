@@ -30,7 +30,7 @@ O projeto tem como finalidade criar uma **rede de comunidade para mulheres no me
 ### Configurações Iniciais
  
 Após ter iniciado o backend, conforme repositório citado acima, siga as instruções abaixo:
-- Faça a instalação do node e rode o comando **npm install**;
+- Faça a instalação do [Node](https://nodejs.org/en/) e rode o comando **npm install**;
 - Rode o comando **ng serve** e o frontend será iniciado no http://localhost:4200/ automaticamente.
 
 
