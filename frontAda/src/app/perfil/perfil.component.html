@@ -1,0 +1,183 @@
+<!-- NAVEGADOR -->
+
+<!-- COMENTÁRIO PARA APAGAR DEPOIS-->
+
+<nav class="navbar navbar-expand-lg navbar-light back">
+    <a class="navbar-brand" routerLink='/principal'>
+        <img src="../../assets/img/logo-cortado-roxo.jpg" style="height: 35pt;" alt="logo-ada-roxo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+        <div id="divBusca" style="width: 440px;">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="txtBusca" style="width: 300pt; height: 35px;" type="text"
+                    placeholder="  pesquisar..." aria-label="Search">
+                <a href="">
+                    <img src="../../assets/img/img-search.png" id="btnBusca" style="height: 20px;" alt="">
+                </a>
+            </form>
+        </div>
+    </div>
+
+    <li class="nav-item dropdown mr-1">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+
+            <img src="../../assets/img/img-dropdown.png" style="height: 20px;" alt="dropdown-opções">
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink='/principal'>Página inicial</a>
+            <a class="dropdown-item" [routerLink] ="['/edit-usuario',id]">Editar Perfil</a>
+            <a class="dropdown-item" href="#">Sair</a>
+        </div>
+    </li>
+</nav>
+<!-- FIM NAVEGADOR -->
+
+<!-- MEU PERFIL -->
+<div class="container mt-3">
+    <div class="row">
+        <!-- COLUNA MENU & POSTAGENS -->
+        <div class="col-md-9">
+     
+            <div class="card perfil-fundo d-flex ml-3 mt-5">
+            
+                <div class="fundo-cima mb-3">
+
+                    <div class="card-header mt-4">
+
+                            <div class="row d-flex flex-row ">
+            
+                                <img src="{{foto}}" alt="Foto de perfil {{nomeCompleto}}" class="img-fluid rounded-circle bs ml-4 foto-perfil mb-4">
+            
+                                <div class="d-flex flex-column ml-4 my-auto fontNomeCargo">
+                                        
+                                    <h1 class="mb-0 font-weight-bold">{{nomeCompleto}}</h1> 
+                                    <h4 class="mt-0">{{cargo}}</h4>
+
+                                    <p class="fp">
+                                        <span class="pr-5">25 conexões</span>                                        
+                                        
+                                        <a class="pr-5 text-white" href="{{link}}" target="_blank">Link do Github</a>
+
+                                        Ingressou em Março de 2021 <br>
+                                        12 postagens
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-end align-self-start">
+
+                                 <button class="btn botaoEditarPerfil d-flex justify-content-end" style="margin-left: 55px;" id="btnEditarPerfil" [routerLink] ="['/edit-usuario',id]">Editar Perfil</button>
+            
+                                </div>
+
+                            </div>
+                            
+                        
+                
+                    </div>   <!-- FIM CARD HEADER -->
+
+                </div>
+
+                <div class="card-body fundo-baixo">
+                    
+                    <div class="text-center">
+
+                        <h2 class="mont font-weight-bold">Minhas Postagens</h2>
+
+                    </div>
+                        <div id="postagem" *ngFor='let item of listaPostagem'>
+                            <div class="card-back d-flex flex-column ml-5 mr-5 mt-5">
+
+                                <div class="row d-flex">
+                
+                                    <img src="{{foto}}" alt="Foto do usuário da postagem"  width="90px" height="90px" class="rounded-circle bs ml-4 mt-3">
+                
+                                    <div class="d-flex flex-column ml-1 pl-3 mt-4">
+                
+                                        <h5 class="mb-0">{{nomeCompleto}}</h5> 
+                                        <p class="mb-0"> {{cargo}} </p>
+                                        <p class="mt-0"><small> {{item.dataHora | date: 'dd/MM/yyyy'}} às {{item.dataHora | date: 'HH:mm'}}</small></p>
+                
+                                    </div>
+                
+                                    <div class="ml-auto mt-3 mr-5">
+                
+                                        <button class="btn botaoPostar" [routerLink] ="['/edit-postagem',item.postagem_id]">Editar</button>
+                
+                                    </div>
+                                    
+                                </div>
+                
+                                    <div class="card-body mt-3 pt-2">
+                
+                                        <h5>{{item.tema.descricaoTema}}</h5>
+                                       
+                                        <p>{{item.descricaoPostagem}}</p>
+                
+                                    </div>
+                            
+                            </div> 
+                        </div>
+                                              
+                    
+                <!-- FIM DA COLUNA 9-->
+                </div>
+                            
+            </div>
+
+        </div>
+
+        <!-- COLUNA CONEXÕES-->
+        <div class="col-md-3">
+           
+            <div class="card conexoes mt-5" style="width: 270px; height: 400px;">
+    
+                <h4 class="text-center pt-3 font-weight-bold">Conexões</h4> 
+                
+                <hr>
+                
+                <div class="row text-center px-3">
+    
+                    <div class="col-md-6">
+                        <img src="https://i.imgur.com/20PfQdL.jpg" alt="" class="img-fluid bs conexao-foto rounded-circle ">
+                        <h6 class="fs-c mt-2"> Juliana Serdan </h6>
+                        <img src="https://i.imgur.com/yNcdiBw.jpg" alt="" class="img-fluid bs conexao-foto rounded-circle ">
+                        <h6 class="fs-c mt-2"> Heloisa Beatriz </h6>
+                        <img src="https://i.imgur.com/U4l29Sr.jpg" alt="" class="img-fluid bs conexao-foto rounded-circle ">
+                        <h6 class="fs-c mt-2"> Jackeline Akemi </h6>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <img src="https://i.imgur.com/55rP31I.jpg"  alt="" class="img-fluid bs conexao-foto rounded-circle ">
+                        <h6 class="fs-c mt-2"> Beatriz Martins </h6>
+                        <img src="https://i.imgur.com/kxS2saL.jpg"  alt="" class="img-fluid bs conexao-foto rounded-circle ">
+                        <h6 class="fs-c mt-2"> Bárbara Liboni </h6>
+                        <img src="https://i.imgur.com/KiZPmF1.jpg"  alt="" class="img-fluid bs conexao-foto rounded-circle ">
+                        <h6 class="fs-c mt-2"> Venôrica Almenara</h6>
+                    </div>
+    
+                </div>
+            </div>      
+
+        </div> <!-- FIM col-md-3-->
+    </div>
+</div>     
+
+<div id="footer" class="row text-center mt-5">
+    <div class="col-md-12">
+      <a href="#" class="mr-5 font-foot">Política de privacidade do rede social ADA</a>
+      <a href="#" class="mr-5 font-foot">Sobre</a>
+      <a href="#" class="mr-5 font-foot">Política de direitos autorais</a>
+      <a href="#" class="font-foot">Direitos de marca</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <p class=" text-white bg-roxo footer text-center m-0 pt-3">ADA 2021 &copy;</p>
+
+    </div>
+</div>
