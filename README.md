@@ -5,6 +5,8 @@
 <h3 align="center">
 
 👩‍💻 ADA é um projeto desenvolvido durante o curso da **[Generation Brasil](https://brazil.generation.org/)**  utilizando as tecnologias ***Java, Spring Boot, REST API, MySQL, Angular e TypeScript***.
+<p align="center">
+https://rede-ada.herokuapp.com/home
 
 </h3>
 
